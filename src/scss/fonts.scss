@@ -5,4 +5,9 @@
   @include font-face('OpenSans', '../fonts/OpenSans', bold, normal);
 */
 
+@include font-face('Montserrat', '../fonts/Montserrat-Regular');
+@include font-face('Montserrat', '../fonts/Montserrat-Bold', bold);
+@include font-face('Montserrat', '../fonts/Montserrat-Italic', normal, italic);
+@include font-face('Montserrat', '../fonts/Montserrat-Medium', 500);
+
 

@@ -11,14 +11,13 @@ html {
 body {
   min-width: $mobile-width;
   margin: 0;
-  font-family: $main-font, $sans-serif;
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 30px;
-  text-align: left;
-  color: black;
-  letter-spacing: 0.05em;
-  background-color: white;
+  font-family: $font-family, $sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  text-align: $text-align;
+  color: $text-color;
+  background-color: $background-color;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
