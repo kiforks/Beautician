@@ -1,0 +1,149 @@
+.services__container {
+  @include flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 58px;
+  background-image: url('../img/main/services/background-photo.png');
+  background-repeat: no-repeat;
+  background-size: 42%;
+  background-position: left 111px top;
+}
+
+.services__wrapper {
+  width: 35%;
+}
+
+.services__title {
+  margin-bottom: 36px;
+}
+
+.services__description {
+  @include reset-margin-text;
+  margin-bottom: 77px;
+  font-style: italic;
+  line-height: 29px;
+  color: $light-black-2;
+}
+
+.services__list {
+  @include flex;
+  justify-content: space-between;
+  width: 62%;
+  @include reset-list;
+  padding-top: 17px;
+}
+
+.services__item {
+  width: 45%;
+  margin-bottom: 35px;
+  @media (max-width: 1805px) {
+    font-size: 13px;
+  }
+}
+
+.services__button {
+  &--item {
+    justify-content: flex-start;
+    width: 100%;
+    @include padding-horizon(25px);
+  }
+}
+
+.services__button-inner {
+  margin-left: 26px;
+}
+
+
+//Desktop Middle
+@include desktop-middle {
+  .services__title {
+    margin-bottom: 30px;
+  }
+
+  .services__description {
+    margin-bottom: 66px;
+    font-size: 14px;
+  }
+
+  .services__item {
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 120%;
+  }
+
+  .services__button {
+    &--item {
+      @include padding-horizon(10px);
+    }
+  }
+
+  .services__button-inner {
+    margin-left: 15px;
+  }
+}
+
+
+//Desktop Small
+@include desktop-small {
+  .services__item {
+    width: 48%;
+    font-size: 11px;
+  }
+}
+
+
+//Tablet
+@include tablet {
+  .services__container {
+    padding-top: 75px;
+    padding-bottom: 0;
+    background-size: 83%;
+    background-position: left -135px top;
+  }
+
+  .services__wrapper {
+    @include flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .services__list {
+    width: 100%;
+  }
+
+  .services__title,
+  .services__description {
+    width: 100%;
+    @include padding-horizon(25px);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .services__item {
+    font-size: 12px;
+  }
+}
+
+
+//Mobile
+@include mobile {
+  .services__container {
+    padding-top: 20px;
+    padding-bottom: 0;
+    background-size: 100%;
+    background-position: left top;
+  }
+
+  .services__item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .services__button {
+    &--item {
+      font-size: 9px;
+    }
+  }
+}

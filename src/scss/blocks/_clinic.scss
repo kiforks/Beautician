@@ -1,0 +1,182 @@
+.clinic__container {
+  @include flex;
+  justify-content: space-between;
+  background-image: url('../img/svg/clinic/flower-background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top 10px left;
+  padding-bottom: 127px;
+
+  &--seminars {
+    padding-left: 36px;
+  }
+}
+
+.clinic__wrapper {
+  width: 50%;
+  padding-top: 312px;
+
+  &--seminars {
+    width: 48%;
+    padding-top: 162px;
+  }
+}
+
+.clinic__gallery {
+  width: 47%;
+
+  &--seminars {
+    width: 49%;
+  }
+}
+
+.clinic__title {
+  margin-bottom: 37px;
+
+  &--gold {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+
+.clinic__title-name {
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 70px;
+}
+
+.clinic__title-gold {
+  color: $gold;
+}
+
+.clinic__description {
+  @include reset-margin-text;
+  margin-bottom: 37px;
+  font-style: italic;
+  line-height: 26px;
+
+  &--seminars {
+    width: 97%;
+    margin-bottom: 13px;
+    text-align: center;
+
+    &:last-of-type {
+      margin-bottom: 37px;
+    }
+  }
+}
+
+
+.clinic__socials {
+  @include flex;
+  justify-content: center;
+  @include reset-list;
+}
+
+
+.clinic__socials-link {
+  @include hover {
+    .clinic__icon {
+      fill: $gold;
+      transform: scale(1.1);
+    }
+  }
+  @include active {
+    .clinic__icon {
+      opacity: $down-opacity;
+      transform: scale(0.9);
+    }
+  }
+}
+
+.clinic__icon {
+  @include transition;
+}
+
+//Desktop Middle
+@include desktop-middle {
+  .clinic__container {
+    padding-bottom: 85px;
+    background-size: contain;
+  }
+
+  .clinic__wrapper {
+    padding-top: 230px;
+  }
+
+  .clinic__title {
+    margin-bottom: 30px;
+  }
+
+  .clinic__title-name {
+    font-size: 55px;
+    line-height: 60px;
+  }
+
+  .clinic__description {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 150%;
+  }
+}
+
+
+//Desktop Small
+@include desktop-small {
+  .clinic__container {
+    padding-bottom: 70px;
+  }
+
+  .clinic__wrapper {
+    padding-top: 180px;
+  }
+
+  .clinic__title {
+    margin-bottom: 15px;
+  }
+
+  .clinic__title-name {
+    font-size: 43px;
+    line-height: 140%;
+  }
+
+  .clinic__description {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+}
+
+//Tablet
+@include tablet {
+  .clinic__title {
+    margin-bottom: 10px;
+  }
+
+  .clinic__title-name {
+    font-size: 29px;
+  }
+}
+
+
+//Mobile
+@include mobile {
+  .clinic__container {
+    padding-bottom: 30px;
+    background-size: 250%;
+    background-position: left top;
+  }
+
+  .clinic__wrapper {
+    width: 100%;
+    padding-top: 100px;
+    margin-bottom: 25px;
+  }
+
+  .clinic__title-name {
+    font-size: 24px;
+  }
+
+  .clinic__description {
+    font-size: 10px;
+  }
+}

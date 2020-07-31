@@ -1,0 +1,85 @@
+.advantages__list {
+  @include flex;
+  justify-content: space-between;
+  @include reset-list;
+  width: 100%;
+  color: $light-black;
+  line-height: 29px;
+  text-align: center;
+}
+
+.advantages__item {
+  @include flex;
+  justify-content: center;
+  width: 31.2%;
+  padding: 149px 97px 85px;
+  background-repeat: no-repeat;
+  background-size: 62px;
+  background-position: top 64px center;
+
+  &:nth-child(3n+2) {
+    background-color: $beige;
+  }
+
+  &--one {
+    background-image: url('../img/svg/advantages/one.svg');
+  }
+
+  &--two {
+    background-image: url('../img/svg/advantages/two.svg');
+  }
+
+  &--three {
+    background-image: url('../img/svg/advantages/three.svg');
+  }
+}
+
+.advantages__description {
+  @include reset-margin-text;
+}
+
+
+//Desktop Middle
+@include desktop-middle {
+  .advantages__item {
+    padding: 120px 50px 65px;
+    background-position: center top 40px;
+  }
+}
+
+
+//Desktop Small
+@include desktop-small {
+  .advantages__list {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .advantages__item {
+    padding: 100px 35px 40px;
+    background-position: center top 30px;
+    background-size: 50px;
+  }
+}
+
+
+//Tablet
+@include tablet {
+  .advantages__list {
+    font-size: 12px;
+  }
+
+  .advantages__item {
+    padding: 75px 15px 25px;
+    background-size: 35px;
+    background-position: top 25px center;
+  }
+}
+
+
+//Mobile
+@include mobile {
+  .advantages__item {
+    width: 100%;
+  }
+}

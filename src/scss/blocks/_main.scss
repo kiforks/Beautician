@@ -1,0 +1,59 @@
+.main-body {
+  max-width: 1920px;
+  width: 100%;
+  @include center-margin;
+}
+
+.main__clinic-container {
+  position: relative;
+  margin-top: 96px;
+  @include before {
+    left: 0;
+    top: 28%;
+    z-index: -1;
+    width: 13%;
+    height: 58%;
+    background-color: $beige;
+  }
+}
+
+.main__advantages {
+  margin-bottom: 125px;
+}
+
+.main__services-container {
+  background-color: rgba(244, 233, 207, 0.3);
+  margin-bottom: 125px;
+}
+
+
+//Desktop Small
+@include desktop-small {
+  .main__advantages {
+    margin-bottom: 75px;
+  }
+}
+
+
+//Tablet
+@include tablet {
+  .main__advantages {
+    margin-bottom: 30px;
+  }
+}
+
+
+//Mobile
+@include mobile {
+  .main__clinic-container {
+    @include before-clean {
+      top: 13%;
+      width: 16%;
+      height: 23%;
+    }
+  }
+
+  .main__advantages {
+    margin-bottom: 0;
+  }
+}

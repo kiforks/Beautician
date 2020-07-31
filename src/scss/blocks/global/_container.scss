@@ -4,3 +4,21 @@
   @include center-margin;
   @include padding-desktop;
 }
+
+
+//Tablet
+@include tablet {
+  .container {
+    width: $tablet-width;
+    @include padding-tablet;
+  }
+}
+
+
+//Mobile
+@include mobile {
+  .container {
+    width: 100%;
+    @include padding-mobile;
+  }
+}
