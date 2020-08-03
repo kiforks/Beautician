@@ -1,0 +1,150 @@
+.preparations__title {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 45px;
+  line-height: 53px;
+}
+
+.preparations__title-gold {
+  color: $gold;
+}
+
+.preparations__table {
+  width: 100%;
+  padding-top: 25px;
+  border-collapse: collapse;
+}
+
+.preparations__thead {
+  background-color: $light-beige;
+}
+
+.preparations__tbody {
+  background-color: $light-beige;
+}
+
+.preparations__caption {
+  padding-left: $table-padding;
+  margin-bottom: 26px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: left;
+}
+
+.preparations__description {
+  @include reset-margin-text;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: 0 0;
+
+  &--name {
+    padding-left: 43px;
+    background-image: url('../img/svg/preparations/name.svg');
+  }
+
+  &--price {
+    padding-left: 43px;
+    background-image: url('../img/svg/preparations/price.svg');
+  }
+
+  &--course {
+    padding-left: 43px;
+    background-image: url('../img/svg/preparations/course.svg');
+  }
+
+  &--duration {
+    padding-left: 43px;
+    background-image: url('../img/svg/preparations/duration.svg');
+  }
+}
+
+.preparations__cell {
+  padding-top: 4px;
+
+  &:first-of-type {
+    width: 42.1%;
+    padding-left: $table-padding;
+  }
+
+  &:nth-of-type(2) {
+    padding-right: 10px;
+    width: 21%;
+  }
+
+  &:last-of-type {
+    width: 18.5%;
+  }
+
+  &--head {
+    padding-top: 28px;
+    padding-bottom: 21px;
+    color: $grey;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 29px;
+  }
+
+  &--time {
+    position: relative;
+    @include padding-vertical(32px);
+    @include before-after {
+      right: 0;
+      z-index: 10;
+      width: 100%;
+      height: 1px;
+      background-color: $light-gold;
+    }
+    @include before-clean {
+      top: 0;
+    }
+    @include after-clean {
+      bottom: 0;
+    }
+
+    &:first-of-type {
+      @include before-after-clean {
+        width: 93%;
+      }
+    }
+
+    &:last-of-type {
+      @include before-after-clean {
+        right: auto;
+        left: 0;
+        width: 84%;
+      }
+    }
+  }
+
+  &--name {
+    padding-top: 22px;
+  }
+
+  &--price,
+  &--during {
+    padding-left: 48px;
+  }
+
+  &--course {
+    padding-left: 84px;
+  }
+}
+
+.preparations__time-description {
+  @include reset-margin-text;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  color: $gold;
+}
+
+.preparations__time {
+  font-weight: normal;
+  font-size: 14px;
+  color: $grey;
+}
+
+.preparations__name {
+  font-weight: bold;
+}

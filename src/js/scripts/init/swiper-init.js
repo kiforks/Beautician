@@ -18,14 +18,14 @@ function initSwiper(slider) {
       prevEl: `.${slider.container}__button--prev`,
       disabledClass: `${slider.container}__button--disabled`,
     },
-    effect: 'fade',
+    effect: slider.effect || 'fade',
     fadeEffect: {
       crossFade: true
     },
     speed: 1000,
-    loop: true,
-    slidesPerView: 2,
-    spaceBetween: 30,
+    loop: slider.loop || false,
+    slidesPerView: slider.slidesPerView || 1,
+    spaceBetween: +slider.spaceBetween || 30,
     wrapperClass: `${slider.container}__list`,
     slideClass: `${slider.container}__item`,
     slideActiveClass: `${slider.container}__item--active`,
@@ -44,16 +44,38 @@ function initSwiper(slider) {
     progressbarFillClass: `${slider.container}__progressbar-fill`,
     clickableClass: `${slider.container}__clickable`,
     lockClass: `${slider.container}__lock`,
-    progressbarOppositeClass: `${slider.container}__progressbar-opposite`
+    progressbarOppositeClass: `${slider.container}__progressbar-opposite`,
+    breakpoints: {
+      320: {
+        slidesPerView: slider.mobileSlidesPerView || 1
+      },
+      768: {
+        slidesPerView: slider.tabletSlidesPerView || 1
+      },
+      1199: {
+        slidesPerView: slider.desktopSmallSlidesPerView || 1
+      }
+    }
   });
 }
 
 const mainSlider = {
   container: 'gallery',
-  containerClass: 'gallery'
+  containerClass: 'gallery',
+  loop: true
+};
+
+const reviews = {
+  container: 'reviews',
+  containerClass: 'reviews__container',
+  slidesPerView: 4,
+  effect: "slide",
+  tabletSlidesPerView: 3,
+  desktopSmallSlidesPerView: 4
 };
 
 initSwiper(mainSlider);
+initSwiper(reviews);
 
 
 

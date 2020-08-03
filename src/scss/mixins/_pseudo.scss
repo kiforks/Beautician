@@ -280,22 +280,22 @@
   }
   &:focus::-webkit-input-placeholder {
     opacity: 0;
-    -webkit-transition: $transition-delay ease-in-out;
-    transition: $transition-delay ease-in-out;
+    -webkit-transition: $transition-duration ease-in-out;
+    transition: $transition-duration ease-in-out;
   }
   &:focus:-moz-placeholder {
     opacity: 0;
-    -moz-transition: $transition-delay ease-in-out;
-    transition: $transition-delay ease-in-out;
+    -moz-transition: $transition-duration ease-in-out;
+    transition: $transition-duration ease-in-out;
   }
   &:focus::-moz-placeholder {
     opacity: 0;
-    -moz-transition: $transition-delay ease-in-out;
-    transition: $transition-delay ease-in-out;
+    -moz-transition: $transition-duration ease-in-out;
+    transition: $transition-duration ease-in-out;
   }
   &:focus:-ms-input-placeholder {
     opacity: 0;
-    -ms-transition: $transition-delay ease-in-out;
-    transition: $transition-delay ease-in-out;
+    -ms-transition: $transition-duration ease-in-out;
+    transition: $transition-duration ease-in-out;
   }
 }

@@ -9,6 +9,7 @@
 
   &--seminars {
     padding-left: 36px;
+    background-image: none;
   }
 }
 
@@ -61,7 +62,7 @@
     text-align: center;
 
     &:last-of-type {
-      margin-bottom: 37px;
+      margin-bottom: 44px;
     }
   }
 }
@@ -71,6 +72,7 @@
   @include flex;
   justify-content: center;
   @include reset-list;
+  margin-bottom: 33px;
 }
 
 
@@ -93,6 +95,20 @@
   @include transition;
 }
 
+.clinic__socials-item {
+  margin-right: 30px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.clinic__button {
+  &--seminars {
+    @include center-margin;
+  }
+}
+
 //Desktop Middle
 @include desktop-middle {
   .clinic__container {
@@ -102,6 +118,10 @@
 
   .clinic__wrapper {
     padding-top: 230px;
+
+    &--seminars {
+      padding-top: 110px;
+    }
   }
 
   .clinic__title {
@@ -117,6 +137,18 @@
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 150%;
+
+    &--seminars {
+      margin-bottom: 20px;
+
+      &:last-of-type {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  .clinic__socials {
+    margin-bottom: 25px;
   }
 }
 
@@ -129,6 +161,10 @@
 
   .clinic__wrapper {
     padding-top: 180px;
+
+    &--seminars {
+      padding-top: 90px;
+    }
   }
 
   .clinic__title {
@@ -143,6 +179,18 @@
   .clinic__description {
     margin-bottom: 20px;
     font-size: 12px;
+
+    &--seminars {
+      margin-bottom: 10px;
+
+      &:last-of-type {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .clinic__socials {
+    margin-bottom: 20px;
   }
 }
 
@@ -154,6 +202,28 @@
 
   .clinic__title-name {
     font-size: 29px;
+  }
+
+  .clinic__wrapper {
+    padding-top: 115px;
+
+    &--seminars {
+      padding-top: 0;
+    }
+  }
+
+  .clinic__description {
+    &--seminars {
+      font-size: 10px;
+
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .clinic__container {
+    padding-left: 0;
   }
 }
 
@@ -170,6 +240,10 @@
     width: 100%;
     padding-top: 100px;
     margin-bottom: 25px;
+
+    &--seminars {
+      padding-top: 25px;
+    }
   }
 
   .clinic__title-name {

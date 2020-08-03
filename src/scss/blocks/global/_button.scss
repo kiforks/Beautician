@@ -1,5 +1,6 @@
 .button {
   display: inline-block;
+  @include reset-button;
   @include center-flex;
   width: 335px;
   padding: 10px 15px;
@@ -53,6 +54,29 @@
       color: white;
     }
   }
+
+  &--footer {
+    background-color: $gold;
+    color: $black;
+    @include hover {
+      background-color: white;
+
+      .button__arrow {
+        &--beige {
+          @include before-clean {
+            background-color: white;
+          }
+          @include after-clean {
+            border-color: white;
+          }
+        }
+      }
+
+      .button__circle {
+        stroke: $gold;
+      }
+    }
+  }
 }
 
 .button__inner {
@@ -69,6 +93,10 @@
   stroke-width: 1px;
   transform-origin: 50% 50%;
   transition: stroke 0.6s ease-in-out;
+
+  &--footer {
+    stroke: white;
+  }
 }
 
 .button__arrow {
@@ -110,7 +138,19 @@
       border-color: $black;
     }
   }
+
+  &--footer {
+    @include before-clean {
+      background-color: $black;
+    }
+    @include after-clean {
+      border-color: $black;
+    }
+  }
 }
+
+
+
 
 
 //Mobile

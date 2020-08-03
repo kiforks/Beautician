@@ -17,13 +17,55 @@
   }
 }
 
+.main__preparations {
+  margin-top: 180px;
+  background-image: url('../img/svg/preparations/background-flower.svg');
+  background-repeat: no-repeat;
+  background-size: 10%;
+  background-position: right -10px top 0;
+}
+
 .main__advantages {
   margin-bottom: 125px;
 }
 
 .main__services-container {
-  background-color: rgba(244, 233, 207, 0.3);
   margin-bottom: 125px;
+  background-color: rgba(244, 233, 207, 0.3);
+
+  &--request {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 0;
+  }
+}
+
+.main__services-box {
+  padding-bottom: 294px;
+  background-image: url('../img//svg/services/circles.svg');
+  background-position: right -4px top 64px;
+  background-repeat: no-repeat;
+  background-size: 6%;
+}
+
+.main__seminars-container {
+  background-image: url('../img//svg/clinic/flower-background--2.svg');
+  background-position: 3% 57%;
+  background-repeat: no-repeat;
+  background-size: 47%;
+}
+
+.main__reviews {
+  position: relative;
+  @include after {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 17.5%;
+    background-color: $black;
+  }
 }
 
 
@@ -32,6 +74,14 @@
   .main__advantages {
     margin-bottom: 75px;
   }
+
+  .main__services-container {
+    margin-bottom: 75px;
+  }
+
+  .main__services-box {
+    padding-bottom: 115px;
+  }
 }
 
 
@@ -39,6 +89,14 @@
 @include tablet {
   .main__advantages {
     margin-bottom: 30px;
+  }
+
+  .main__seminars-container {
+    background-position: 3% 32%;
+  }
+
+  .main__services-box {
+    padding-bottom: 60px;
   }
 }
 
@@ -55,5 +113,24 @@
 
   .main__advantages {
     margin-bottom: 0;
+  }
+
+  .main__services-container {
+    margin-bottom: 45px;
+
+    &--request {
+      margin-bottom: 0;
+    }
+  }
+
+  .main__seminars-container {
+    background-position: 0 0;
+    background-size: contain;
+  }
+
+  .main__services-box {
+    padding-bottom: 25px;
+    background-position: right 2px top 45px;
+    background-size: 20%;
   }
 }

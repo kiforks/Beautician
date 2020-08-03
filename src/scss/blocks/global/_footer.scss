@@ -1,0 +1,179 @@
+.footer {
+  padding-top: 109px;
+  padding-bottom: 22px;
+  color: white;
+  background-color: $black;
+}
+
+.footer__icon {
+  fill: $gold;
+  @include transition;
+}
+
+.footer__socials-link {
+  @include center-flex;
+  @include hover {
+    .footer__icon {
+      fill: white;
+      transform: scale(1.1);
+    }
+  }
+  @include active {
+    .footer__icon {
+      opacity: $down-opacity;
+      transform: scale(0.9);
+    }
+  }
+}
+
+.footer__wrapper {
+  @include flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 97px;
+}
+
+.footer__inner {
+  @include flex;
+  align-items: center;
+  margin-right: 160px;
+
+  &--socials {
+    flex-direction: column;
+    margin-left: auto;
+    padding-top: 16px;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &--logo {
+    width: 30%;
+  }
+}
+
+.footer__socials-list {
+  @include flex;
+  @include reset-list;
+}
+
+.footer__socials-item {
+  margin-right: 30px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.footer__copyright,
+.footer__description {
+  @include reset-margin-text;
+}
+
+.footer__description {
+  margin-bottom: 21px;
+}
+
+.footer__copyright {
+  text-align: center;
+}
+
+.footer__logo {
+  display: inline-block;
+}
+
+.footer__image {
+  width: 100%;
+  @include object-fit(contain);
+}
+
+
+//Desktop middle
+@include desktop-middle {
+  .footer {
+    padding-top: 90px;
+  }
+
+  .footer__wrapper {
+    margin-bottom: 80px;
+  }
+}
+
+
+//Desktop small
+@include desktop-small {
+  .footer {
+    padding-top: 70px;
+  }
+
+  .footer__wrapper {
+    margin-bottom: 60px;
+  }
+
+  .footer__inner {
+    margin-right: 110px;
+  }
+}
+
+
+//Tablet
+@include tablet {
+  .footer {
+    padding-top: 40px;
+    font-size: 12px;
+    line-height: 120%;
+  }
+
+  .footer__wrapper {
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .footer__inner {
+    margin-right: 0;
+    width: 30%;
+
+    &--socials {
+      margin-left: 0;
+    }
+  }
+
+  .footer__button {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    font-size: 10px;
+    line-height: 120%;
+  }
+
+  .footer__copyright {
+    font-size: 9px;
+    line-height: 120%;
+  }
+}
+
+//Mobile
+@include mobile {
+  .footer {
+    padding-top: 25px;
+  }
+
+  .footer__inner {
+    width: 100%;
+    margin-bottom: 25px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &--socials {
+      padding-top: 0;
+    }
+  }
+
+  .footer__button {
+    @include padding-vertical(10px);
+  }
+}
+
