@@ -13,4 +13,4 @@ function closeModal(selector) {
   })
 }
 
-closeModal('modal');
+closeModal('popup');

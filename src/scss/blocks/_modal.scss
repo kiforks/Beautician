@@ -4,6 +4,11 @@
   padding: 8% 7% 4.5%;
   color: $light-black;
   background-color: $beige;
+
+  &--request {
+    width: 42.7%;
+    padding: 8.7% 8% 5%;
+  }
 }
 
 .modal__input {

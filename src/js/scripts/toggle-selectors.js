@@ -41,4 +41,9 @@ function toggleSelectors(button, selector, accessibility = false, focus = false)
   }
 }
 
+toggleSelectors('header__button','header');
+toggleSelectors('header__button','main-body');
+toggleSelectors('button--modal','popup');
+toggleSelectors('popup__button-closed','popup');
+
 

@@ -33,10 +33,10 @@
 
       &--beige {
         @include before-clean {
-          background-color: white;
+          background-color: $gold;
         }
         @include after-clean {
-          border-color: white;
+          border-color: $gold;
         }
       }
     }
@@ -50,8 +50,8 @@
     background-color: $beige;
     color: $black;
     @include hover {
-      background-color: $black;
-      color: white;
+      background-color: $beige;
+      color: $gold;
     }
   }
 

@@ -9,10 +9,20 @@
   color: $gold;
 }
 
+.preparations__wrapper {
+  margin-bottom: 77px;
+  overflow-x: scroll;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 .preparations__table {
   width: 100%;
   padding-top: 25px;
   border-collapse: collapse;
+  overflow-x: scroll;
 }
 
 .preparations__thead {
@@ -34,33 +44,40 @@
 
 .preparations__description {
   @include reset-margin-text;
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: 0 0;
 
-  &--name {
+  &--head {
     padding-left: 43px;
-    background-image: url('../img/svg/preparations/name.svg');
+  }
+}
+
+.preparations__row {
+  height: auto;
+  @include transition;
+
+  &--time {
+    background-color: $light-beige;
   }
 
-  &--price {
-    padding-left: 43px;
-    background-image: url('../img/svg/preparations/price.svg');
-  }
-
-  &--course {
-    padding-left: 43px;
-    background-image: url('../img/svg/preparations/course.svg');
-  }
-
-  &--duration {
-    padding-left: 43px;
-    background-image: url('../img/svg/preparations/duration.svg');
+  &--closed {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    opacity: 0;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 }
 
 .preparations__cell {
   padding-top: 4px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: 0 center;
 
   &:first-of-type {
     width: 42.1%;
@@ -83,6 +100,10 @@
     font-weight: bold;
     font-size: 15px;
     line-height: 29px;
+
+    &:first-of-type {
+      background-position: 9% center;
+    }
   }
 
   &--time {
@@ -96,7 +117,7 @@
       background-color: $light-gold;
     }
     @include before-clean {
-      top: 0;
+      top: -1px;
     }
     @include after-clean {
       bottom: 0;
@@ -118,16 +139,36 @@
   }
 
   &--name {
-    padding-top: 22px;
+    padding-top: 21px;
+  }
+
+  &--head-name {
+    background-image: url('../img/svg/preparations/name.svg');
+  }
+
+  &--head-price {
+    background-image: url('../img/svg/preparations/price.svg');
+  }
+
+  &--head-course {
+    background-image: url('../img/svg/preparations/course.svg');
+  }
+
+  &--head-duration {
+    background-image: url('../img/svg/preparations/duration.svg');
   }
 
   &--price,
   &--during {
-    padding-left: 48px;
+    padding-left: 45px;
   }
 
   &--course {
     padding-left: 84px;
+  }
+
+  &--last {
+    padding-bottom: 27px;
   }
 }
 
@@ -147,4 +188,197 @@
 
 .preparations__name {
   font-weight: bold;
+}
+
+.preparations__table-button {
+  position: absolute;
+  right: 23%;
+  top: 47%;
+  z-index: 10;
+  @include reset-button;
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/svg/preparations/polygon.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 0;
+  @include focus-opacity;
+  @include transition;
+
+  &--closed {
+    top: 30%;
+    transform: rotate(180deg);
+  }
+}
+
+
+//Desktop Middle
+@include desktop-middle {
+  .preparations__table,
+  .preparations__time-description,
+  .preparations__cell--head {
+    font-size: 14px;
+    line-height: 160%;
+  }
+
+  .preparations__time {
+    font-size: 12px;
+  }
+
+  .preparations__cell {
+    &--head {
+      background-size: 28px;
+
+      &:first-of-type {
+        background-position: 60px center;
+      }
+    }
+  }
+}
+
+
+//Desktop Small
+@include desktop-small {
+  .preparations__table,
+  .preparations__time-description,
+  .preparations__cell--head {
+    font-size: 10px;
+  }
+
+  .preparations__time {
+    font-size: 8px;
+  }
+
+  .preparations__cell {
+    &:first-of-type {
+      padding-left: 40px;
+    }
+
+    &:last-of-type {
+      padding-right: 40px;
+    }
+
+    &--head {
+      padding-top: 20px;
+      padding-bottom: 15px;
+      background-size: 23px;
+
+      &:first-of-type {
+        background-position: 35px center;
+      }
+    }
+
+    &--time {
+      @include padding-vertical(20px);
+    }
+
+    &--name {
+      padding-top: 12px;
+    }
+
+    &--last {
+      padding-bottom: 12px;
+    }
+  }
+
+  .preparations__description {
+    &--head {
+      padding-left: 30px;
+    }
+  }
+
+  .preparations__caption {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .preparations__wrapper {
+    margin-bottom: 45px;
+  }
+
+  .preparations__title {
+    margin-bottom: 40px;
+  }
+
+  .preparations__table-button {
+    &--closed {
+      top: 19%;
+    }
+  }
+}
+
+
+//Tablet
+@include tablet {
+  .preparations__table {
+    width: 708px;
+  }
+
+  .preparations__table,
+  .preparations__time-description,
+  .preparations__cell--head {
+    font-size: 8px;
+  }
+
+  .preparations__time {
+    font-size: 7px;
+  }
+
+  .preparations__caption {
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+
+  .preparations__title {
+    margin-bottom: 25px;
+  }
+}
+
+
+//Mobile
+@include mobile {
+  .preparations__caption {
+    padding-left: 0;
+  }
+
+  .preparations__cell {
+    &:first-of-type {
+      padding-left: 30px;
+    }
+
+    &--head {
+      @include padding-vertical(10px);
+
+      &:first-of-type {
+        background-position: 25px center;
+      }
+    }
+
+    &--time {
+      @include padding-vertical(15px);
+    }
+
+    &--name {
+      padding-top: 10px;
+    }
+  }
+
+  .preparations__wrapper {
+    margin-bottom: 25px;
+  }
+
+  .preparations__table-button {
+    &--closed {
+      top: 12%;
+    }
+  }
+
+  .preparations__title {
+    @include padding-mobile;
+  }
+
+  .preparations__caption {
+    @include padding-mobile;
+  }
 }

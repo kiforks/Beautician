@@ -1,0 +1,19 @@
+@mixin hidden {
+  position: absolute;
+  z-index: -1000;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  opacity: 0;
+  border: 0;
+  padding: 0;
+}
+
+@mixin visible {
+  position: static;
+  z-index: 1000;
+  width: auto;
+  height: auto;
+  margin: 0;
+  opacity: 1;
+}

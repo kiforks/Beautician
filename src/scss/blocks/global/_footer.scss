@@ -3,6 +3,10 @@
   padding-bottom: 22px;
   color: white;
   background-color: $black;
+
+  &--preparations {
+    padding-top: 29px;
+  }
 }
 
 .footer__icon {
@@ -123,6 +127,10 @@
     padding-top: 40px;
     font-size: 12px;
     line-height: 120%;
+
+    &--preparations {
+      padding-top: 25px;
+    }
   }
 
   .footer__wrapper {

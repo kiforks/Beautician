@@ -1,0 +1,103 @@
+.request {
+  position: relative;
+  @include before {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 81%;
+    background-color: $black;
+  }
+}
+
+.request__container {
+  @include flex;
+  justify-content: space-between;
+  padding-right: 209px;
+}
+
+.request__wrapper {
+  width: 55%;
+  padding-top: 165px;
+  color: white;
+}
+
+.request__title {
+  margin-bottom: 37px;
+}
+
+.request__description {
+  @include reset-margin-text;
+}
+
+
+//Desktop middle
+@include desktop-middle {
+  .request__container {
+    padding-right: 150px;
+  }
+}
+
+
+//Desktop small
+@include desktop-small {
+  .request__container {
+    padding-right: 100px;
+  }
+
+  .request__wrapper {
+    padding-top: 130px;
+  }
+
+  .request__description {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .request__title {
+    margin-bottom: 25px;
+  }
+}
+
+//Tablet
+@include tablet {
+  .request__container {
+    padding-right: 50px;
+  }
+
+  .request__wrapper {
+    padding-top: 100px;
+  }
+
+  .request__description {
+    font-size: 12px;
+    line-height: 140%;
+  }
+
+  .request__title {
+    margin-bottom: 15px;
+  }
+}
+
+
+//Mobile
+@include mobile {
+  .request {
+    margin-top: 0;
+    background-color: $black;
+    @include before {
+      display: none;
+    }
+  }
+
+  .request__wrapper {
+    width: 100%;
+    padding-top: 15px;
+  }
+
+  .request__description {
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
+}
