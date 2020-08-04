@@ -1,0 +1,26 @@
+<section class="popup popup--closed">
+<!--    Якщо заявка успішно відправлена, то відкривається модальне вікно з подякою, а також добавляється класс 'popup__container&#45;&#45;success' до 'popup__container', який добавляє бекграунд картинку  -->
+  <div class="popup__container">
+    <form class="popup__wrapper popup__wrapper--form">
+      <h2 class="visually-hidden">Заявка</h2>
+      <label for="popup__input--name" class="visually-hidden">Ім'я</label>
+      <input type="text" class="popup__input popup__input--name" id="popup__input--name" placeholder="Ім'я*" required>
+      <label for="popup__input--tel" class="visually-hidden">Номер телефону</label>
+      <input type="tel" class="popup__input popup__input--tel" id="popup__input--tel" placeholder="Номер телефону*" required>
+      <label for="popup__input--email" class="visually-hidden">Email</label>
+      <input type="text" class="popup__input popup__input--email" id="popup__input--email" placeholder="Email*" required>
+      <p class="popup__description">Ми дбаємо про те, щоб ваша інформація залишалася конфіденційною</p>
+      <include src="src/html/blocks/button/_button--popup.html"></include>
+    </form>
+
+<!--  Модальне вікно з подякою  -->
+    <div class="popup__wrapper popup__wrapper--thanks">
+      <p class="popup__title-description">Дякуємо!</p>
+      <p class="popup__description">Заявка на безкоштовну консультацію прийнята. Наш менеджер вам зателефонує якнайшвидше.</p>
+    </div>
+
+    <button type="button" class="popup__button-closed">
+      <span class="visually-hidden">Закрити</span>
+    </button>
+  </div>
+</section>

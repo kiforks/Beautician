@@ -1,0 +1,139 @@
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 100000;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+
+  &--closed {
+    top: -2000px;
+    z-index: -1000;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+    .popup__container {
+      top: -2000px;
+      z-index: -10000;
+    }
+  }
+}
+
+.popup__container {
+  position: absolute;
+  @include center-transform;
+  z-index: 1000;
+  width: 613px;
+  padding: 95px;
+  background-color: white;
+  transition: top 1s ease-in-out;
+
+  &--success {
+    background-image: url('../img/svg/popup/flower.svg');
+    background-size: 147px;
+    background-position: right 11px top 73px;
+    background-repeat: no-repeat;
+  }
+}
+
+.popup__wrapper {
+  &--thanks {
+    display: none;
+  }
+}
+
+.popup__input {
+  @include reset-input;
+  width: 100%;
+  padding: 0 10px 13px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid $gold;
+  @include placeholder;
+  @include placeholder-focus;
+
+  &:last-of-type {
+    margin-bottom: 45px;
+  }
+}
+
+.popup__description {
+  width: 80%;
+  @include reset-margin-text;
+  @include center-margin;
+  margin-bottom: 13px;
+  font-size: 11px;
+  line-height: 19px;
+  font-style: italic;
+  color: $light-black;
+  text-align: center;
+}
+
+.popup__button {
+  @include center-margin;
+}
+
+.popup__button-closed {
+  @include reset-button;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 1000;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  @include focus-scale;
+  @include before-after {
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 2px;
+    background-color: $black;
+  }
+  @include before-clean {
+    transform: rotate(45deg);
+  }
+  @include after-clean {
+    transform: rotate(-45deg);
+  }
+}
+
+.popup__title-description {
+  padding-top: 8px;
+  @include reset-margin-text;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 60px;
+}
+
+
+//Mobile
+@include mobile {
+  .popup {
+    font-size: 12px;
+    line-height: 140%;
+  }
+
+  .popup__container {
+    padding-top: 75px;
+    padding-bottom: 50px;
+    width: 100%;
+    @include padding-mobile;
+  }
+
+  .popup__input {
+    padding: 0 10px 10px;
+    margin-bottom: 25px;
+  }
+}

@@ -52,7 +52,8 @@
 }
 
 @mixin focus-scale {
-  transition: $transition-duration ease-in-out;
+  transition: all $transition-duration ease-in-out;
+  outline: 0;
 
   &:hover,
   &:focus {
@@ -60,7 +61,7 @@
   }
 
   &:active {
-    transform: scale($downscale);
+    transform: scale($down-scale);
     opacity: $down-opacity;
   }
 }
@@ -258,18 +259,22 @@
   /* Placeholder */
 @mixin placeholder {
   &::-webkit-input-placeholder {
+    color: inherit;
     @content;
   }
 
   &:-moz-placeholder {
+    color: inherit;
     @content;
   }
 
   &::-moz-placeholder {
+    color: inherit;
     @content;
   }
 
   &:-ms-input-placeholder {
+    color: inherit;
     @content;
   }
 }
