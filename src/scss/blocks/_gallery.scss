@@ -75,11 +75,13 @@
   @include active-opacity;
   @include before {
     @include center-transform-vertical;
+    z-index: 100;
     width: 16px;
     height: 1px;
     background-color: $black;
   }
   @include after {
+    z-index: 100;
     top: 10px;
     width: 6px;
     height: 6px;

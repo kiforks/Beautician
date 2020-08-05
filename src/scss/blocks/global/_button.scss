@@ -12,7 +12,6 @@
   @include hover {
     color: $black;
     background-color: $gold;
-    transform: scale(0.99);
 
     .button__circle {
       stroke: white;

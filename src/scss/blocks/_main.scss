@@ -25,6 +25,7 @@
 }
 
 .main__preparations {
+  padding-top: 83px;
   margin-bottom: 9px;
   background-image: url('../img/svg/preparations/background-flower.svg');
   background-repeat: no-repeat;
@@ -100,6 +101,10 @@
   .main__services-box {
     padding-bottom: 115px;
   }
+
+  .main__preparations {
+    padding-top: 50px;
+  }
 }
 
 
@@ -116,12 +121,17 @@
   .main__services-box {
     padding-bottom: 60px;
   }
+
+  .main__preparations {
+    padding-top: 30px;
+  }
 }
 
 
 //Mobile
 @include mobile {
   .main__clinic-container {
+    margin-top: -20px;
     @include before-clean {
       top: 13%;
       width: 16%;
@@ -153,6 +163,7 @@
   }
 
   .main__preparations {
+    padding-top: 15px;
     padding-right: 0;
     padding-left: 0;
   }
