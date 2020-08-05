@@ -4,6 +4,7 @@
   font-size: 14px;
   line-height: 17px;
   background-color: $beige;
+  overflow: hidden;
 
   &--closed {
     display: block;
@@ -235,7 +236,7 @@
   cursor: default;
 
   &--phone {
-    animation: vibrate 4s cubic-bezier(.36, .07, .19, .97) infinite;
+    animation: vibrate 6s cubic-bezier(.36, .07, .19, .97) infinite;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
   }
@@ -243,7 +244,7 @@
   &--track {
     animation-name: jump;
     animation-timing-function: ease;
-    animation-duration: 2s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
   }
 }

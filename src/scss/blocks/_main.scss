@@ -8,6 +8,10 @@
   }
 }
 
+.main {
+  overflow: hidden;
+}
+
 .main__clinic-container {
   position: relative;
   @include before {

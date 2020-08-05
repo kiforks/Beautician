@@ -85,6 +85,7 @@
   height: 26px;
   @include transition;
   @include active-opacity;
+  outline: 0;
   @include before {
     @include center-transform-vertical;
     width: 16px;

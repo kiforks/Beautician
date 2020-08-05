@@ -25,6 +25,7 @@ function initSwiper(slider) {
       },
       speed: 1000,
       loop: slider.loop || false,
+      autoplay: slider.autoplay || false,
       slidesPerView: slider.slidesPerView || 1,
       spaceBetween: +slider.spaceBetween || 30,
       wrapperClass: `${slider.container}__list`,
@@ -64,7 +65,8 @@ function initSwiper(slider) {
 const mainSlider = {
   container: 'gallery',
   containerClass: 'gallery',
-  loop: true
+  loop: true,
+  autoplay: true
 };
 
 const reviews = {
