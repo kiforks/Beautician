@@ -1,5 +1,5 @@
 <section class="popup popup--closed">
-<!--    Якщо заявка успішно відправлена, то відкривається модальне вікно з подякою, а також добавляється класс 'popup__container&#45;&#45;success' до 'popup__container', який добавляє бекграунд картинку  -->
+<!--    Якщо заявка успішно відправлена, то відкривається модальне вікно з подякою, а також добавляється класс 'popup__container--success' до 'popup__container', який добавляє бекграунд картинку  -->
   <div class="popup__container">
     <form class="popup__wrapper popup__wrapper--form">
       <h2 class="visually-hidden">Заявка</h2>
@@ -11,16 +11,30 @@
       <input type="text" class="popup__input popup__input--email" id="popup__input--email" placeholder="Email*" required>
       <p class="popup__description">Ми дбаємо про те, щоб ваша інформація залишалася конфіденційною</p>
       <include src="src/html/blocks/button/_button--popup.html"></include>
+      <button type="button" class="popup__button-closed">
+        <span class="visually-hidden">Закрити</span>
+      </button>
     </form>
 
 <!--  Модальне вікно з подякою  -->
     <div class="popup__wrapper popup__wrapper--thanks">
       <p class="popup__title-description">Дякуємо!</p>
       <p class="popup__description">Заявка на безкоштовну консультацію прийнята. Наш менеджер вам зателефонує якнайшвидше.</p>
+      <button type="button" class="popup__button-closed">
+        <span class="visually-hidden">Закрити</span>
+      </button>
     </div>
 
-    <button type="button" class="popup__button-closed">
-      <span class="visually-hidden">Закрити</span>
-    </button>
+<!--  Модальне вікно з телефоном  -->
+    <form class="popup__wrapper popup__wrapper--tel popup__wrapper--closed">
+      <h2 class="visually-hidden">Телефон</h2>
+      <label for="popup__input--phone" class="visually-hidden">Номер телефону</label>
+      <input type="tel" class="popup__input popup__input--tel" id="popup__input--phone" placeholder="Номер телефону*" required>
+      <p class="popup__description">Ми дбаємо про те, щоб ваша інформація залишалася конфіденційною</p>
+      <include src="src/html/blocks/button/_button--tel.html"></include>
+      <button type="button" class="popup__button-closed popup__button-closed--wrapper">
+        <span class="visually-hidden">Закрити</span>
+      </button>
+    </form>
   </div>
 </section>

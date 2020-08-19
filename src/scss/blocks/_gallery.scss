@@ -71,6 +71,7 @@
   z-index: 10;
   width: 21px;
   height: 26px;
+  outline: 0;
   @include transition;
   @include active-opacity;
   @include before {

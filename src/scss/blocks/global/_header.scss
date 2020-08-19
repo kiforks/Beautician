@@ -66,6 +66,7 @@
     }
 
     .header__tel {
+      @include reset-button;
       @include visible;
       display: inline-block;
       min-width: 226px;

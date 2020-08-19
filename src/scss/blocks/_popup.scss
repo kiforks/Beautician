@@ -46,8 +46,16 @@
 }
 
 .popup__wrapper {
+  @include transition;
+
   &--thanks {
     display: none;
+  }
+
+  &--closed {
+    position: absolute;
+    top: -500%;
+    z-index: -1000;
   }
 }
 
@@ -93,7 +101,7 @@
   @include focus-scale;
   @include before-after {
     left: 0;
-    top: 0;
+    bottom: 50%;
     z-index: 1000;
     width: 100%;
     height: 2px;

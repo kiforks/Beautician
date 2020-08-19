@@ -101,6 +101,7 @@ function html() {
     ]))
     .pipe(htmlValidator())
     .pipe(bemValidator())
+    .pipe(dest('build/uncompressed/html/'))
     .pipe(htmlmin({
       collapseWhitespace: true
     }))
@@ -143,6 +144,7 @@ function js() {
     .pipe(plumber())
     .pipe(eslint())
     .pipe(eslint.format())
+    .pipe(dest('build/uncompressed/js/'))
     .pipe(babel({
         presets: ['@babel/env']
     }))
