@@ -44,8 +44,8 @@ function toggleSelectors(button, selector, accessibility = false, focus = false)
 toggleSelectors('header__button','header');
 toggleSelectors('header__button','main-body');
 toggleSelectors('button--modal','popup');
-toggleSelectors('header__tel','popup');
-toggleSelectors('header__tel','popup__wrapper');
+toggleSelectors('button--tel','popup');
+toggleSelectors('button--tel','popup__wrapper');
 toggleSelectors('popup__button-closed','popup');
 toggleSelectors('popup__button-closed--wrapper','popup__wrapper');
 
