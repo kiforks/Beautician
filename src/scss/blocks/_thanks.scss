@@ -1,4 +1,4 @@
-.popup {
+.thanks {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -21,14 +21,14 @@
     margin: 0;
     border: 0;
 
-    .popup__container {
+    .thanks__container {
       top: -2000px;
       z-index: -10000;
     }
   }
 }
 
-.popup__container {
+.thanks__container {
   position: absolute;
   @include center-transform;
   z-index: 1000;
@@ -36,9 +36,13 @@
   padding: 95px;
   background-color: white;
   transition: top 1s ease-in-out;
+  background-image: url('../img/svg/popup/flower.svg');
+  background-size: 147px;
+  background-position: right 11px top 85px;
+  background-repeat: no-repeat;
 }
 
-.popup__wrapper {
+.thanks__wrapper {
   @include transition;
 
   &--closed {
@@ -48,7 +52,7 @@
   }
 }
 
-.popup__input {
+.thanks__input {
   @include reset-input;
   width: 100%;
   padding: 0 10px 13px;
@@ -62,7 +66,7 @@
   }
 }
 
-.popup__description {
+.thanks__description {
   width: 80%;
   @include reset-margin-text;
   @include center-margin;
@@ -74,11 +78,11 @@
   text-align: center;
 }
 
-.popup__button {
+.thanks__button {
   @include center-margin;
 }
 
-.popup__button-closed {
+.thanks__button-closed {
   @include reset-button;
   position: absolute;
   top: 30px;
@@ -104,7 +108,7 @@
   }
 }
 
-.popup__title-description {
+.thanks__title-description {
   padding-top: 8px;
   @include reset-margin-text;
   margin-bottom: 10px;
@@ -117,19 +121,19 @@
 
 //Mobile
 @include mobile {
-  .popup {
+  .thanks {
     font-size: 12px;
     line-height: 140%;
   }
 
-  .popup__container {
+  .thanks__container {
     padding-top: 75px;
     padding-bottom: 50px;
     width: 100%;
     @include padding-mobile;
   }
 
-  .popup__input {
+  .thanks__input {
     padding: 0 10px 10px;
     margin-bottom: 25px;
   }
